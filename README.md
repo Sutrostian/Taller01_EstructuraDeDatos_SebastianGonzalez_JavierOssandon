@@ -23,13 +23,12 @@ g++ -std=c++17 -Iinclude src/*.cpp -o Taller.exe
 \```
 
 ## Estructura del proyecto
-\```
+```
 ├── include/    → archivos de cabecera (.h) con las declaraciones de las clases
 ├── src/        → implementación (.cpp) de cada clase y el main.cpp
 ├── data/       → archivos de texto de prueba (pacientes_prueba.txt)
-├── .gitignore
 └── README.md
-\```
+```
 
 ## Jerarquía de clases (POO)
 - **Persona** (clase padre): atributos `id`, `nombre`, `edad`
