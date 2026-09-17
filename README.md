@@ -27,9 +27,11 @@ g++ -std=c++17 -Iinclude src/dominio/*.cpp src/main.cpp -o Taller.exe
 ## Estructura del proyecto
 ```
 ├── include/
-│   └── dominio/     → archivos de cabecera (.h): Persona.h, Paciente.h
+│   ├── dominio/     → archivos de cabecera (.h): Persona.h, Paciente.h
+│   └── logica/      → archivos de cabecera (.h): NodoQueue.h, Queue.h
 ├── src/
 │   ├── dominio/     → implementación (.cpp): Persona.cpp, Paciente.cpp
+│   ├── logica/      → implementación (.cpp): Queue.cpp
 │   └── main.cpp     → punto de entrada del programa
 ├── data/            → archivo de texto de prueba (pacientes_prueba.txt)
 ├── .gitignore
