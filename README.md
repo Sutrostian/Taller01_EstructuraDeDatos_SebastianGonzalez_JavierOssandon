@@ -15,7 +15,7 @@ respetando su orden de llegada y los almacena en el servicio correspondiente.
 ## Compilación
 
 ```bash
-g++ -std=c++17 -Iinclude src/*.cpp -o Taller.exe
+g++ -std=c++17 -Iinclude src/dominio/*.cpp src/main.cpp -o Taller.exe
 ```
 
 ## Ejecución
@@ -26,9 +26,12 @@ g++ -std=c++17 -Iinclude src/*.cpp -o Taller.exe
 
 ## Estructura del proyecto
 ```
-├── include/    → archivos de cabecera (.h) con las declaraciones de las clases
-├── src/        → implementación (.cpp) de cada clase y el main.cpp
-├── data/       → archivo de texto de prueba (pacientes_prueba.txt)
+├── include/
+│   └── dominio/     → archivos de cabecera (.h): Persona.h, Paciente.h
+├── src/
+│   ├── dominio/     → implementación (.cpp): Persona.cpp, Paciente.cpp
+│   └── main.cpp     → punto de entrada del programa
+├── data/            → archivo de texto de prueba (pacientes_prueba.txt)
 ├── .gitignore
 └── README.md
 ```
