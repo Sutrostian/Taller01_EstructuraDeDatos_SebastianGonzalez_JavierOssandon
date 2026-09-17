@@ -13,14 +13,16 @@ respetando su orden de llegada y los almacena en el servicio correspondiente.
 - Compilador de C++ compatible con C++17 (g++, recomendado vía MSYS2 en Windows)
 
 ## Compilación
-\```bash
+
+```bash
 g++ -std=c++17 -Iinclude src/*.cpp -o Taller.exe
-\```
+```
 
 ## Ejecución
-\```bash
+
+```bash
 ./Taller.exe
-\```
+```
 
 ## Estructura del proyecto
 ```
@@ -40,15 +42,15 @@ g++ -std=c++17 -Iinclude src/*.cpp -o Taller.exe
 - Muchas Más Funcionalidades Pronto...
 
 ## Formato del archivo de entrada
-\```
+```
 ID;Nombre;Edad;Servicio
-\```
+```
 
 Ejemplo:
-\```
+```
 001;Juan Perez;25;Cardiologia
 002;Maria Soto;67;Urgencias
-\```
+```
 
 ## Servicios disponibles
 Urgencias, Medicina General, Cardiología, Neurología, Traumatología, Cirugía, Pediatría, Hospitalización
