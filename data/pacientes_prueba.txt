@@ -1,0 +1,120 @@
+001;Paula Vargas;51;Urgencias
+002;Sebastian Lopez;29;Cardiologia
+003;Cristian Godoy;91;Medicina General
+004;Ignacio Rojas;27;Urgencias
+005;Matias Lopez;87;Urgencias
+006;Camila Godoy;4;Pediatria
+007;Emilia Ramirez;16;Traumatologia
+008;Gabriela Herrera;6;Pediatria
+009;Cristobal Castro;59;Neurologia
+010;Diego Fuentes;2;Pediatria
+011;Constanza Araya;21;Traumatologia
+012;Carolina Aguilera;64;Medicina General
+013;Carla Fernandez;95;Traumatologia
+014;Benjamin Ortiz;24;Neurologia
+015;Pedro Lopez;26;Traumatologia
+016;Javiera Muñoz;5;Pediatria
+017;Felipe Tapia;63;Cardiologia
+018;Constanza Silva;25;Traumatologia
+019;Daniela Herrera;36;Neurologia
+020;Felipe Pizarro;87;Traumatologia
+021;Javiera Contreras;45;Urgencias
+022;Pedro Contreras;5;Pediatria
+023;Luis Silva;43;Cirugia
+024;Alvaro Guzman;15;Pediatria
+025;Alvaro Aguilera;49;Cardiologia
+026;Ricardo Martinez;90;Traumatologia
+027;Ignacio Ramirez;6;Pediatria
+028;Javiera Salinas;27;Hospitalizacion
+029;Gabriela Torres;35;Medicina General
+030;Paula Herrera;10;Pediatria
+031;Luis Pizarro;10;Pediatria
+032;Felipe Cabrera;86;Traumatologia
+033;Juan Vargas;59;Traumatologia
+034;Sofia Reyes;3;Pediatria
+035;Felipe Perez;80;Traumatologia
+036;Gabriela Rios;54;Medicina General
+037;Paula Mora;35;Neurologia
+038;Benjamin Herrera;92;Urgencias
+039;Francisca Guzman;30;Urgencias
+040;Benjamin Gutierrez;23;Neurologia
+041;Sebastian Ortiz;26;Medicina General
+042;Carolina Guzman;84;Medicina General
+043;Manuel Salinas;76;Cardiologia
+044;Joaquin Herrera;83;Traumatologia
+045;Daniela Bravo;85;Neurologia
+046;Gabriela Gonzalez;67;Traumatologia
+047;Monica Tapia;82;Hospitalizacion
+048;Emilia Vargas;44;Neurologia
+049;Luis Espinoza;91;Urgencias
+050;Joaquin Lopez;16;Neurologia
+051;Luis Torres;24;Neurologia
+052;Pedro Espinoza;81;Medicina General
+053;Sebastian Morales;43;Hospitalizacion
+054;Amanda Salinas;47;Hospitalizacion
+055;Catalina Vera;28;Neurologia
+056;Diego Bravo;70;Cirugia
+057;Josefa Aguilera;28;Urgencias
+058;Ana Carrasco;29;Cirugia
+059;Sebastian Gonzalez;84;Neurologia
+060;Emilia Salinas;3;Pediatria
+061;Cristobal Aguilera;25;Neurologia
+062;Emilia Fernandez;22;Medicina General
+063;Alvaro Godoy;27;Urgencias
+064;Gabriela Martinez;68;Cardiologia
+065;Agustin Sepulveda;67;Neurologia
+066;Ana Herrera;1;Pediatria
+067;Martina Sanchez;52;Hospitalizacion
+068;Ignacio Fernandez;35;Hospitalizacion
+069;Camila Reyes;23;Neurologia
+070;Bastian Godoy;56;Urgencias
+071;Ana Torres;80;Hospitalizacion
+072;Maximiliano Herrera;81;Urgencias
+073;Carla Rios;92;Medicina General
+074;Luis Martinez;2;Pediatria
+075;Renata Martinez;95;Urgencias
+076;Carla Vera;49;Cirugia
+077;Matias Contreras;49;Neurologia
+078;Nicolas Salinas;74;Traumatologia
+079;Francisca Diaz;74;Urgencias
+080;Rodrigo Ortiz;25;Medicina General
+081;Amanda Silva;32;Traumatologia
+082;Constanza Diaz;63;Neurologia
+083;Isidora Herrera;85;Hospitalizacion
+084;Esteban Gutierrez;86;Urgencias
+085;Gaspar Muñoz;49;Cardiologia
+086;Sofia Muñoz;50;Cardiologia
+087;Isidora Pena;59;Neurologia
+088;Matias Sanchez;48;Hospitalizacion
+089;Ana Fuentes;14;Pediatria
+090;Cristobal Rojas;58;Urgencias
+091;Manuel Salinas;36;Traumatologia
+092;Hector Cortes;9;Pediatria
+093;Juan Vargas;35;Medicina General
+094;Amanda Rojas;90;Cirugia
+095;Joaquin Castro;3;Pediatria
+096;Pedro Gutierrez;21;Cirugia
+097;Constanza Silva;29;Neurologia
+098;Constanza Fernandez;10;Pediatria
+099;Hector Castro;36;Neurologia
+100;Valentina Vera;38;Urgencias
+101;Hector Espinoza;13;Pediatria
+102;Monica Martinez;36;Traumatologia
+103;Barbara Muñoz;14;Pediatria
+104;Pedro Sepulveda;41;Neurologia
+105;Felipe Araya;45;Traumatologia
+106;Javiera Soto;67;Neurologia
+107;Vicente Morales;51;Medicina General
+108;Constanza Mora;11;Pediatria
+109;Amanda Espinoza;30;Urgencias
+110;Antonia Rios;20;Traumatologia
+111;Diego Pena;6;Pediatria
+112;Carolina Contreras;10;Pediatria
+113;Trinidad Vargas;15;Pediatria
+114;Renata Gonzalez;21;Traumatologia
+115;Esteban Bravo;82;Urgencias
+116;Amanda Gonzalez;71;Cirugia
+117;Luis Espinoza;31;Cirugia
+118;Carolina Gutierrez;68;Traumatologia
+119;Francisca Carrasco;86;Traumatologia
+120;Ricardo Gonzalez;11;Pediatria
