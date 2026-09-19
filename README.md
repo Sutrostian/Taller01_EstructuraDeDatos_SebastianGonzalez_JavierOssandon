@@ -15,7 +15,7 @@ respetando su orden de llegada y los almacena en el servicio correspondiente.
 ## Compilación
 
 ```bash
-g++ -std=c++17 -Iinclude src/dominio/*.cpp src/main.cpp -o Taller.exe
+g++ -std=c++17 -Iinclude src/dominio/*.cpp src/logica/*.cpp src/main.cpp -o Taller.exe
 ```
 
 ## Ejecución
@@ -28,10 +28,11 @@ g++ -std=c++17 -Iinclude src/dominio/*.cpp src/main.cpp -o Taller.exe
 ```
 ├── include/
 │   ├── dominio/     → archivos de cabecera (.h): Persona.h, Paciente.h
-│   └── logica/      → archivos de cabecera (.h): NodoQueue.h, Queue.h
+│   └── logica/      → archivos de cabecera (.h): NodoQueue.h, Queue.h,
+│                       NodoPacienteServicio.h, NodoServicio.h, ListaServicios.h
 ├── src/
 │   ├── dominio/     → implementación (.cpp): Persona.cpp, Paciente.cpp
-│   ├── logica/      → implementación (.cpp): Queue.cpp
+│   ├── logica/      → implementación (.cpp): Queue.cpp, ListaServicios.cpp
 │   └── main.cpp     → punto de entrada del programa
 ├── data/            → archivo de texto de prueba (pacientes_prueba.txt)
 ├── .gitignore
@@ -44,6 +45,8 @@ g++ -std=c++17 -Iinclude src/dominio/*.cpp src/main.cpp -o Taller.exe
 
 ## Funcionalidades
 - [x] Jerarquía de clases Persona/Paciente
+- [x] Esqueleto de Queue (cola de pacientes pendientes)
+- [x] Esqueleto de ListaServicios (lista de servicios con pacientes derivados)
 - Muchas Más Funcionalidades Pronto...
 
 ## Formato del archivo de entrada
