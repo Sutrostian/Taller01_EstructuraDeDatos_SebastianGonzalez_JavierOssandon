@@ -1,8 +1,8 @@
 #pragma once
 #include "dominio/Paciente.h"
 
-class NodoQueue {
+class NodoPacienteServicio {
 public:
     Paciente* paciente;
-    NodoQueue* next;
+    NodoPacienteServicio* siguiente;
 };
