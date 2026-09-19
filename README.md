@@ -29,10 +29,11 @@ g++ -std=c++17 -Iinclude src/dominio/*.cpp src/logica/*.cpp src/main.cpp -o Tall
 ├── include/
 │   ├── dominio/     → archivos de cabecera (.h): Persona.h, Paciente.h
 │   └── logica/      → archivos de cabecera (.h): NodoQueue.h, Queue.h,
-│                       NodoPacienteServicio.h, NodoServicio.h, ListaServicios.h
+│                       NodoPacienteServicio.h, NodoServicio.h, ListaServicios.h,
+│                       NodoHistorial.h, Stack.h
 ├── src/
 │   ├── dominio/     → implementación (.cpp): Persona.cpp, Paciente.cpp
-│   ├── logica/      → implementación (.cpp): Queue.cpp, ListaServicios.cpp
+│   ├── logica/      → implementación (.cpp): Queue.cpp, ListaServicios.cpp, Stack.cpp
 │   └── main.cpp     → punto de entrada del programa
 ├── data/            → archivo de texto de prueba (pacientes_prueba.txt)
 ├── .gitignore
@@ -47,8 +48,8 @@ g++ -std=c++17 -Iinclude src/dominio/*.cpp src/logica/*.cpp src/main.cpp -o Tall
 - [x] Jerarquía de clases Persona/Paciente
 - [x] Esqueleto de Queue (cola de pacientes pendientes)
 - [x] Esqueleto de ListaServicios (lista de servicios con pacientes derivados)
+- [x] Esqueleto de Stack (historial de atenciones)
 - Muchas Más Funcionalidades Pronto...
-
 ## Formato del archivo de entrada
 ```
 ID;Nombre;Edad;Servicio
