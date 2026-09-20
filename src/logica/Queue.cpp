@@ -77,6 +77,18 @@ void Queue::mostrar() {
 
 }
 
+bool Queue::existePaciente(int idBuscado) {
+    NodoQueue* actual = start; // Usamos 'start' que es el puntero de tu clase
+    while (actual != nullptr) {
+        // Accedemos directo a 'paciente' y 'next' tal como lo haces en tu método mostrar()
+        if (actual->paciente->getId() == idBuscado) {
+            return true; // ¡Ya está en la cola! Es duplicado.
+        }
+        actual = actual->next;
+    }
+    return false; // No está duplicado
+}
+
 Queue::~Queue() {
     //liberar todos los nodos restantes para evitar fugas de memoria
  
@@ -87,3 +99,4 @@ Queue::~Queue() {
     }
 
 }
+

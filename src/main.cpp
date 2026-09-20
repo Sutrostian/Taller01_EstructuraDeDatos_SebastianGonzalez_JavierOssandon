@@ -35,6 +35,12 @@ void cargarPacientesDesdeArchivo(Queue* colaEspera, const string& nombreArchivo)
         *ptr = '\0'; 
         int id = atoi(inicio); 
 
+        // Validación de duplicados usando la Queue
+        if (colaEspera->existePaciente(id)) {
+            cout << "Aviso: El paciente con ID " << id << " ya existe (Duplicado). Se omitira." << endl;
+            continue; 
+        }
+
         // 2. Extraer Nombre
         ptr++; 
         while (*ptr == ' ') ptr++; 

@@ -12,5 +12,6 @@ public:
     Paciente* eliminar();
     bool estaVacia();
     void mostrar();
+    bool existePaciente(int idBuscado);
     ~Queue();
 };

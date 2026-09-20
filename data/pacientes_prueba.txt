@@ -1,4 +1,6 @@
 001;Paula Vargas;51;Urgencias
+001;Paula Vargas;51;Urgencias
+001;Paula Vargas;51;Urgencias
 002;Sebastian Lopez;29;Cardiologia
 003;Cristian Godoy;91;Medicina General
 004;Ignacio Rojas;27;Urgencias
@@ -117,4 +119,5 @@
 117;Luis Espinoza;31;Cirugia
 118;Carolina Gutierrez;68;Traumatologia
 119;Francisca Carrasco;86;Traumatologia
+120;Ricardo Gonzalez;11;Pediatria
 120;Ricardo Gonzalez;11;Pediatria
