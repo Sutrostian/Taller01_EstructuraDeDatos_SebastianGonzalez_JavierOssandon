@@ -94,9 +94,21 @@ Queue::~Queue() {
  
     while (!estaVacia()) {
         NodoQueue* aux = start;
+        delete aux->paciente;
         start = start->next;
         delete aux;
     }
 
+}
+
+Paciente* Queue::buscarPorId(int idBuscado) {
+    NodoQueue* actual = start;
+    while (actual != nullptr) {
+        if (actual->paciente->getId() == idBuscado) {
+            return actual->paciente;
+        }
+        actual = actual->next;
+    }
+    return nullptr; // no se encontro
 }
 

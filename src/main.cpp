@@ -144,7 +144,8 @@ int main() {
         cout << "1. Atender pacientes" << endl;
         cout << "2. Ver departamento" << endl;
         cout << "3. Revisar historial de atencion" << endl;
-        cout << "4. Salir" << endl;
+        cout << "4. Buscar paciente por ID" << endl;
+        cout << "5. Salir" << endl;
         cout << "Seleccionar opcion: ";
         cin >> opcion;
         cout << endl;
@@ -201,13 +202,37 @@ int main() {
                 cout << endl;
                 break;
             }
-            case 4:
-                cout << "Hasta luego : D." << endl;
+            case 4: {
+                int idBuscado;
+                cout << "Ingrese el ID del paciente a buscar: ";
+                cin >> idBuscado;
+
+                Paciente* encontrado = colaEspera->buscarPorId(idBuscado);
+                if (encontrado != nullptr) {
+                    cout << "\nPaciente encontrado (en espera):" << endl;
+                    cout << "ID: " << encontrado->getId() << "\nNombre: " << encontrado->getNombre()
+                    << "\nEdad: " << encontrado->getEdad() << "\nServicio: " << encontrado->getServicio() << endl;
+                    break;
+                }
+
+                encontrado = hospital->buscarPacientePorId(idBuscado);
+                if (encontrado != nullptr) {
+                    cout << "\nPaciente encontrado (ya atendido):" << endl;
+                    cout << "ID: " << encontrado->getId() << "\nNombre: " << encontrado->getNombre()
+                    << "\nEdad: " << encontrado->getEdad() << "\nServicio: " << encontrado->getServicio() << endl;
                 break;
+                }
+
+                cout << "No se encontro ningun paciente con ID " << idBuscado << "." << endl;
+            break;
+            }
+            case 5:
+                cout << "Hasta luego : D." << endl;
+            break;
             default:
                 cout << "Opcion invalida. Intente nuevamente." << endl << endl;
         }
-    } while (opcion != 4);
+    } while (opcion != 5);
 
     delete colaEspera; 
     delete historial; 

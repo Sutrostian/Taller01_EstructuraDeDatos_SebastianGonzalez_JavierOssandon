@@ -15,5 +15,6 @@ public:
     void agregarPaciente(string nombreServicio, Paciente* p);
     void mostrarServicio(string nombreServicio);
     void mostrarTodos();
+    Paciente* buscarPacientePorId(int idBuscado);
     ~ListaServicios();
 };

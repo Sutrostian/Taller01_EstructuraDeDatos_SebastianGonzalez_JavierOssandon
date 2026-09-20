@@ -13,5 +13,6 @@ public:
     bool estaVacia();
     void mostrar();
     bool existePaciente(int idBuscado);
+     Paciente* buscarPorId(int idBuscado);
     ~Queue();
 };

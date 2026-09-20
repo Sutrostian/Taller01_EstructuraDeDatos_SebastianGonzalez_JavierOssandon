@@ -129,3 +129,18 @@ ListaServicios::~ListaServicios() {
         delete tempServicio; // liberar memoria del nodo servicio
     }
 }
+
+Paciente* ListaServicios::buscarPacientePorId(int idBuscado) {
+    NodoServicio* servicioActual = inicio;
+    while (servicioActual != nullptr) {
+        NodoPacienteServicio* pacienteActual = servicioActual->pacientes;
+        while (pacienteActual != nullptr) {
+            if (pacienteActual->paciente->getId() == idBuscado) {
+                return pacienteActual->paciente;
+            }
+            pacienteActual = pacienteActual->siguiente;
+        }
+        servicioActual = servicioActual->siguiente;
+    }
+    return nullptr; // no se encontro en ningun servicio
+}
