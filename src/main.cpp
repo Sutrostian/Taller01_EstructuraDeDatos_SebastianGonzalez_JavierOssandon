@@ -67,6 +67,28 @@ void cargarPacientesDesdeArchivo(Queue* colaEspera, const string& nombreArchivo)
         *ptr = '\0';
         string servicio(inicio);
 
+        // --- VALIDACIÓN DE ROBUSTEZ: Comprobar si el servicio es válido ---
+        string serviciosValidos[8] = {
+            "Urgencias", "Medicina General", "Cardiologia", 
+            "Neurologia", "Traumatologia", "Cirugia", 
+            "Pediatria", "Hospitalizacion"
+        };
+
+        bool servicioValido = false;
+        for(int i = 0; i < 8; i++) {
+            if(servicio == serviciosValidos[i]) {
+                servicioValido = true;
+                break;
+            }
+        }
+
+        if(!servicioValido) {
+            cout << "Aviso: El servicio '" << servicio << "' no es valido. Se omitira el paciente ID " << id << "." << endl;
+            continue; // Saltamos esta línea si el departamento no existe
+        }
+        //--------
+
+
         Paciente* p = new Paciente(id, nombre, edad, servicio);
         colaEspera->insertar(p);
         cargados++;
