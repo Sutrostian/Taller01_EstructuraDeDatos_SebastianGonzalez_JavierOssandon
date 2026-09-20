@@ -34,22 +34,26 @@ g++ -std=c++17 -Iinclude src/dominio/*.cpp src/logica/*.cpp src/main.cpp -o Tall
 ├── src/
 │   ├── dominio/     → implementación (.cpp): Persona.cpp, Paciente.cpp
 │   ├── logica/      → implementación (.cpp): Queue.cpp, ListaServicios.cpp, Stack.cpp
-│   └── main.cpp     → punto de entrada del programa
-├── data/            → archivo de texto de prueba (pacientes_prueba.txt)
+│   └── main.cpp     → punto de entrada del programa y menú principal
+├── data/            → archivos de texto de prueba (pacientes_prueba.txt, pacientes_casos_borde.txt)
 ├── .gitignore
 └── README.md
 ```
 
 ## Jerarquía de clases (POO)
-- **Persona** (clase padre): atributos `id`, `nombre`, `edad`
-- **Paciente** (clase hija): agrega el atributo `servicio`
+- **Persona** (clase padre): atributos `id`, `nombre`, `edad`. Expone getters (`getId`, `getNombre`, `getEdad`) y un destructor virtual para asegurar la liberación correcta de memoria en clases derivadas.
+- **Paciente** (clase hija de Persona): agrega el atributo `servicio` y su getter (`getServicio`). Hereda el resto de atributos y comportamiento de Persona.
 
 ## Funcionalidades
 - [x] Jerarquía de clases Persona/Paciente
-- [x] Esqueleto de Queue (cola de pacientes pendientes)
-- [x] Esqueleto de ListaServicios (lista de servicios con pacientes derivados)
-- [x] Esqueleto de Stack (historial de atenciones)
-- Muchas Más Funcionalidades Pronto...
+- [x] Carga de pacientes desde archivo de texto (con aritmética de punteros)
+- [x] Validación de líneas: campos vacíos, ID/edad no numéricos, servicios inválidos y duplicados
+- [x] Cola de pacientes pendientes (Queue) - FIFO
+- [x] Lista de servicios del hospital (ListaServicios), con pacientes derivados por departamento
+- [x] Historial de atenciones (Stack) - LIFO
+- [x] Menú principal: atender pacientes, ver departamentos, revisar historial, salir
+- [x] Liberación de memoria dinámica al finalizar la ejecución
+  
 ## Formato del archivo de entrada
 ```
 ID;Nombre;Edad;Servicio
