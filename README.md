@@ -24,6 +24,25 @@ g++ -std=c++17 -Iinclude src/dominio/*.cpp src/logica/*.cpp src/main.cpp -o Tall
 ./Taller.exe
 ```
 
+## Uso
+Al ejecutar el programa, se carga automáticamente el archivo de pacientes y se muestra el menú principal:
+
+```
+=== HOSPITAL MARMAJA ===
+1. Atender pacientes
+2. Ver departamento
+3. Revisar historial de atencion
+4. Buscar paciente por ID
+5. Salir
+Seleccionar opcion:
+```
+
+- **Atender pacientes**: muestra la cola de pacientes en espera y permite indicar cuántos atender. Cada paciente atendido se deriva automáticamente a su servicio y se registra en el historial.
+- **Ver departamento**: muestra la cantidad de pacientes por servicio y permite consultar el detalle de uno en particular.
+- **Revisar historial de atención**: muestra el registro de atenciones, de la más reciente a la más antigua.
+- **Buscar paciente por ID**: busca un paciente tanto en la cola de espera como en los servicios, e indica su estado actual.
+- **Salir**: termina la ejecución liberando toda la memoria dinámica utilizada.
+
 ## Estructura del proyecto
 ```
 ├── include/
@@ -51,9 +70,10 @@ g++ -std=c++17 -Iinclude src/dominio/*.cpp src/logica/*.cpp src/main.cpp -o Tall
 - [x] Cola de pacientes pendientes (Queue) - FIFO
 - [x] Lista de servicios del hospital (ListaServicios), con pacientes derivados por departamento
 - [x] Historial de atenciones (Stack) - LIFO
-- [x] Menú principal: atender pacientes, ver departamentos, revisar historial, salir
-- [x] Liberación de memoria dinámica al finalizar la ejecución
-  
+- [x] Búsqueda de pacientes por ID (en espera o ya atendidos)
+- [x] Menú principal: atender pacientes, ver departamentos, revisar historial, buscar paciente, salir
+- [x] Liberación de memoria dinámica al finalizar la ejecución, incluyendo pacientes no atendidos
+
 ## Formato del archivo de entrada
 ```
 ID;Nombre;Edad;Servicio
