@@ -9,6 +9,21 @@
 
 using namespace std;
 
+// Valida que un string represente un numero entero positivo (solo digitos, sin signo)
+bool esEnteroValido(const char* str) {
+    if (str == nullptr || *str == '\0') {
+        return false; // vacio no es valido
+    }
+    const char* p = str;
+    while (*p != '\0') {
+        if (*p < '0' || *p > '9') {
+            return false; // cualquier caracter que no sea digito invalida el numero
+        }
+        p++;
+    }
+    return true;
+}
+
 // Función para leer el archivo usando ARITMÉTICA DE PUNTEROS (Sin lógica de duplicados aún)
 void cargarPacientesDesdeArchivo(Queue* colaEspera, const string& nombreArchivo) {
     ifstream archivo(nombreArchivo);
@@ -33,6 +48,12 @@ void cargarPacientesDesdeArchivo(Queue* colaEspera, const string& nombreArchivo)
         while (*ptr != ';' && *ptr != '\0') ptr++;
         if (*ptr == '\0') continue; 
         *ptr = '\0'; 
+
+        // --- VALIDACION: el ID debe ser un numero valido (sin letras, sin signo negativo) ---
+        if (!esEnteroValido(inicio)) {
+            cout << "Aviso: El ID '" << inicio << "' no es un numero valido. Se omitira la linea." << endl;
+            continue;
+        }
         int id = atoi(inicio); 
 
         // Validación de duplicados usando la Queue
@@ -50,6 +71,12 @@ void cargarPacientesDesdeArchivo(Queue* colaEspera, const string& nombreArchivo)
         *ptr = '\0';
         string nombre(inicio);
 
+        // --- VALIDACION: el nombre no puede estar vacio ---
+        if (nombre.empty()) {
+            cout << "Aviso: El paciente ID " << id << " tiene nombre vacio. Se omitira." << endl;
+            continue;
+        }
+
         // 3. Extraer Edad
         ptr++; 
         while (*ptr == ' ') ptr++; 
@@ -57,6 +84,12 @@ void cargarPacientesDesdeArchivo(Queue* colaEspera, const string& nombreArchivo)
         while (*ptr != ';' && *ptr != '\0') ptr++;
         if (*ptr == '\0') continue;
         *ptr = '\0';
+
+        // --- VALIDACION: la edad debe ser un numero valido (sin letras, sin signo negativo) ---
+        if (!esEnteroValido(inicio)) {
+            cout << "Aviso: El paciente ID " << id << " tiene una edad invalida ('" << inicio << "'). Se omitira." << endl;
+            continue;
+        }
         int edad = atoi(inicio);
 
         // 4. Extraer Servicio
@@ -103,8 +136,7 @@ int main() {
     ListaServicios* hospital = new ListaServicios();
     Stack* historial = new Stack();
     
-    // <-- RUTA CORREGIDA: Apuntamos a la carpeta 'data' que vimos en tu captura
-    cargarPacientesDesdeArchivo(colaEspera, "data/pacientes_prueba.txt");
+    cargarPacientesDesdeArchivo(colaEspera, "data/pacientes_casos_borde.txt");
 
     int opcion;
     do {
