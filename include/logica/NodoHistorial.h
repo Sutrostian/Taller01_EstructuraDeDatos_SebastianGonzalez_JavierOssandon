@@ -1,8 +1,9 @@
 #pragma once
 #include "dominio/Paciente.h"
 
-class NodoHistorial {
+class NodoHistorial
+{
 public:
-    Paciente* paciente;
-    NodoHistorial* siguiente;
+    Paciente *paciente;
+    NodoHistorial *siguiente;
 };

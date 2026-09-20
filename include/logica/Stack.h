@@ -2,14 +2,15 @@
 #include "logica/NodoHistorial.h"
 #include "dominio/Paciente.h"
 
-class Stack {
+class Stack
+{
 private:
-    NodoHistorial* top;
+    NodoHistorial *top;
 
 public:
     Stack();
-    void apilar(Paciente* p);
-    Paciente* desapilar();
+    void apilar(Paciente *p);
+    Paciente *desapilar();
     bool estaVacia();
     void mostrar();
     ~Stack();

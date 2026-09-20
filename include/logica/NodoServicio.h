@@ -3,9 +3,10 @@
 #include "logica/NodoPacienteServicio.h"
 using namespace std;
 
-class NodoServicio {
+class NodoServicio
+{
 public:
     string nombre;
-    NodoPacienteServicio* pacientes;
-    NodoServicio* siguiente;
+    NodoPacienteServicio *pacientes;
+    NodoServicio *siguiente;
 };

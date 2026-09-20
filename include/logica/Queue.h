@@ -2,17 +2,18 @@
 #include "logica/NodoQueue.h"
 #include "dominio/Paciente.h"
 
-class Queue {
+class Queue
+{
 private:
-    NodoQueue* start;
+    NodoQueue *start;
 
 public:
     Queue();
-    void insertar(Paciente* p);
-    Paciente* eliminar();
+    void insertar(Paciente *p);
+    Paciente *eliminar();
     bool estaVacia();
     void mostrar();
     bool existePaciente(int idBuscado);
-     Paciente* buscarPorId(int idBuscado);
+    Paciente *buscarPorId(int idBuscado);
     ~Queue();
 };
