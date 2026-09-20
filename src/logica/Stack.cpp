@@ -4,31 +4,65 @@ using namespace std;
 
 Stack::Stack() {
     //inicializar  en nullptr
+    top = nullptr;
 }
 
 void Stack::apilar(Paciente* p) {
     // crear un NodoHistorial nuevo
     // el nuevo nodo apunta al top actual (siguiente = top)
     // luego el top pasa a ser el nuevo nodo
+
+    NodoHistorial* nuevo = new NodoHistorial();
+    nuevo->paciente = p;
+    nuevo->siguiente = top; // el nuevo nodo apunta al top actual
+    top = nuevo; // el top pasa a ser el nuevo nodo
 }
 
 Paciente* Stack::desapilar() {
-    // guardar el paciente del top actual
-    // mover la cima al siguiente nodo
-    // liberar el nodo viejo y retornar el paciente guardado
-    return nullptr;
+    if (estaVacia()) {
+        return nullptr;
+    }
+    
+    NodoHistorial* aux = top;
+    Paciente* p = aux->paciente;
+    
+    // El top baja al siguiente nodo
+    top = top->siguiente;
+    
+    // Borramos el nodo de la pila (pero no el paciente)
+    delete aux; 
+    
+    return p;
 }
 
 bool Stack::estaVacia() {
     // retornar true si top es nullptr
-    return true;
+    return top == nullptr;
 }
 
 void Stack::mostrar() {
     // recorrer desde top hasta el final, imprimiendo cada paciente
     // (naturalmente queda en orden LIFO: el ultimo atendido se muestra primero)
+    if (estaVacia()) {
+        cout << "El historial de atenciones esta vacio." << endl;
+        return;
+    }
+
+    cout<< "Historial de atenciones (de la mas reciente a la mas antigua):" << endl;
+    NodoHistorial* aux = top;
+    while (aux != nullptr) {
+        Paciente* p = aux->paciente;
+        cout << "Nombre: " << p->getNombre() << ", Edad: " << p->getEdad() << ", Servicio: " << p->getServicio() << endl;
+        aux = aux->siguiente;
+    }
+    cout << "--" << endl;
 }
 
 Stack::~Stack() {
     // liberar todos los nodos restantes para evitar fugas de memoria
+    while (!estaVacia()) {
+        NodoHistorial* aux = top;
+        top = top->siguiente;
+        delete aux; // IMPORTANTE: Solo borrar el nodo.
+    }
 }
